@@ -5,12 +5,13 @@ public class Manager {
 
     private int resultLength = 10;
 
-    public Manager(int resultLent) {
-        this.resultLength = resultLent;
-    }
-
     public Manager() {
     }
+
+    public Manager(int resultLength) {
+        this.resultLength = resultLength;
+    }
+
 
     public void addFilm(String name) {
         int length = this.nameFilms.length + 1;
@@ -30,11 +31,6 @@ public class Manager {
 
     public String[] findLast() {
         int resultLength = this.resultLength;
-
-
-        if (resultLength < 0) {
-            resultLength = 0;
-        }
 
 
         if (this.nameFilms.length == 0) {

@@ -71,6 +71,7 @@ class ManagerTest {
 
     }
 
+
     @Test
     void findLast() {
         this.manager.addFilm("Отель Белград");
@@ -105,6 +106,20 @@ class ManagerTest {
         String[] mas = manager.findAll();
 
         int expected = 10;
+
+        String[] newMas = this.manager.findLast();
+
+        int actual = newMas.length;
+
+        assertEquals(expected, actual);
+    }
+    @Test
+    void findLastMin() {
+
+
+        String[] mas = manager.findAll();
+
+        int expected = 0;
 
         String[] newMas = this.manager.findLast();
 
