@@ -105,27 +105,27 @@ class ManagerTest {
 
         String[] mas = manager.findAll();
 
-        int expected = 10;
+        String[] expected = {"444", "333", "222", "111", "Белград", "Вперёд",
+                "Номер один", "Тролли. Мировой тур", "Человек невидимка", "Джентельмены"};
 
-        String[] newMas = this.manager.findLast();
+        String[] actual = this.manager.findLast();
 
-        int actual = newMas.length;
 
-        assertEquals(expected, actual);
+        assertArrayEquals(expected, actual);
     }
+
     @Test
     void findLastMin() {
 
 
         String[] mas = manager.findAll();
 
-        int expected = 0;
+        String[] expected = {};
 
-        String[] newMas = this.manager.findLast();
+        String[] actual = this.manager.findLast();
 
-        int actual = newMas.length;
 
-        assertEquals(expected, actual);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -146,12 +146,11 @@ class ManagerTest {
 
         String[] mas = manager.findAll();
 
-        int expected = 3;
+        String[] expected = {"444", "333", "222"};
 
-        String[] newMas = manager.findLast();
+        String[] actual = manager.findLast();
 
-        int actual = newMas.length;
 
-        assertEquals(expected, actual);
+        assertArrayEquals(expected, actual);
     }
 }
